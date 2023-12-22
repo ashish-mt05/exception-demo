@@ -1,0 +1,418 @@
+{
+  "info": {
+    "_postman_id": "60fe05ba-78b7-4ed3-b239-421812388250",
+    "name": "W2-Api",
+    "description": "This collection contains requests used to interact with the W2 Api.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1.0",
+      "item": [
+        {
+          "name": "KYC Check",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Basic {{W2-Apikey}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Bundle\": \"SISPlusCheck\",\n    \"Data\": {\n        \"NameQuery\": \"Robert Mugabe\"\n    },\n    \"Options\": {\n        \"Sandbox\": \"true\"\n    },\n    \"ClientReference\": \"Testing Sandbox\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/kyccheck?api-version=1.0",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "kyccheck"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.0"
+                }
+              ]
+            },
+            "description": "https://developer.w2globaldata.com/rest/kyccheck/"
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Document",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Basic {{W2-Apikey}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Document",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "Reference",
+                  "value": "you-know-nothing-jon-snuuuuu",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/documentupload?api-version=1.0",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "documentupload"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.0"
+                }
+              ]
+            },
+            "description": "https://developer.w2globaldata.com/rest/document-upload/"
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "1.1",
+      "item": [
+        {
+          "name": "KYC-Check",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Basic {{W2-Apikey}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Bundle\": \"SISPlusCheck\",\n    \"Data\": {\n        \"NameQuery\": \"Robert Mugabe\"\n    },\n    \"Options\": {\n        \"Sandbox\": \"true\"\n    },\n    \"ClientReference\": \"Testing Sandbox\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/kyc-check?api-version=1.1",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "kyc-check"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.1"
+                }
+              ]
+            },
+            "description": "https://developer.w2globaldata.com/rest/kyccheck/"
+          },
+          "response": []
+        },
+        {
+          "name": "Upload-Document",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Basic {{W2-Apikey}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Document",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "Reference",
+                  "value": "you-know-nothing-jon-snuuuuu",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/document-upload?api-version=1.1",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "document-upload"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.1"
+                }
+              ]
+            },
+            "description": "https://developer.w2globaldata.com/rest/document-upload/"
+          },
+          "response": []
+        },
+        {
+          "name": "Document-Verification/Crop",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic {{W2-Apikey}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Page",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "DocumentType",
+                  "value": "Id1",
+                  "type": "text"
+                },
+                {
+                  "key": "Image",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "ClientReference",
+                  "value": "my-reference-123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/document-verification/crop?api-version=1.1",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "document-verification",
+                "crop"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Document-Verification/Verify",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic {{W2-Apikey}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Pages",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "Pages",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "DocumentType",
+                  "value": "Id1",
+                  "type": "text"
+                },
+                {
+                  "key": "ClientReference",
+                  "value": "my-reference-123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/document-verification/verify?api-version=1.1",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "document-verification",
+                "verify"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Facial-Comparison/Compare",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic {{W2-Apikey}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Current",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "Comparison",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "ClientReference",
+                  "value": "my-reference-123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://api.w2globaldata.com/facial-comparison/compare?api-version=1.1",
+              "protocol": "https",
+              "host": [
+                "api",
+                "w2globaldata",
+                "com"
+              ],
+              "path": [
+                "facial-comparison",
+                "compare"
+              ],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "1.1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "a5842627-38cb-4ed5-bd3b-ec38d2691e44",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "b87b1d79-0fc2-4be3-8e4b-07215b0fadcd",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
